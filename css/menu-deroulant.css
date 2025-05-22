@@ -1,0 +1,76 @@
+.dropdown-container {
+    position: relative; 
+    display: inline-block; 
+    text-align: center;
+    width: 100%; 
+}
+
+/* Bouton du menu déroulant */
+.dropdown-button {
+    background-color: #3498db;
+    color: white;
+    padding: 15px 25px;
+    font-size: 1.1em;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto; 
+    min-width: 250px;
+}
+
+.dropdown-button:hover {
+    background-color: #2980b9; 
+    transform: translateY(-2px);
+}
+
+.dropdown-arrow {
+    margin-left: 10px; 
+    transition: transform 0.3s ease;
+}
+
+/* Contenu du menu déroulant (caché par défaut) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 250px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1; 
+    border-radius: 8px;
+    margin-top: 10px; 
+    left: 50%; 
+    transform: translateX(-50%);
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #e0e0e0;
+}
+
+/* Classe JavaScript pour afficher le menu */
+.dropdown-content.show {
+    display: block;
+}
+
+/* Centrage du conteneur du dropdown dans la section */
+#dropdown-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 250px;
+}

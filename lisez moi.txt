@@ -1,0 +1,11 @@
+nom: kontchou kouamedjouo christ roland
+
+matricule:24s98587
+
+info 152: initiation au developpement web
+
+il s'agit ici du tpe (travail personnelle de l'etudiand) , ceci consistant a la realisation d'un mini site web devant contenir un cv 
+, un portfolio a l'interieur du quel les elements sont organisergrace au gridcard et un menu deroulant intuitif.Le tous devant etre placer sur github et obtenir un lien.
+
+
+ce mini site que j'ai developper dans ce sens regroupe aisement les demandes du cahier de charge. et possede des icone grace awesome

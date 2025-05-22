@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial="2025-05-22 04:50:49">
+    <title>Inscription INFO152 - Université de Douala</title>
+    <link rel="stylesheet" href="style1.css"> <link rel="stylesheet" href="css/formulaire.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Inscription en INFO152</h1>
+            <p>Université de Douala, Filière Informatique</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="pagecv.html">Accueil CV</a></li>
+                <li><a href="portfolio.html">Mon Portfolio</a></li>
+                <li><a href="menu-deroulant.html">Menu Déroulant</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="form-section" class="section-content">
+            <h2>Formulaire d'Inscription en INFO152</h2>
+            <form action="#" method="POST" class="registration-form">
+                <div class="form-group">
+                    <label for="nom">Nom :</label>
+                    <input type="text" id="nom" name="nom" required placeholder="Votre nom de famille">
+                </div>
+                <div class="form-group">
+                    <label for="prenom">Prénom(s) :</label>
+                    <input type="text" id="prenom" name="prenom" required placeholder="Votre prénom">
+                </div>
+                <div class="form-group">
+                    <label for="matricule">Matricule Étudiant :</label>
+                    <input type="text" id="matricule" name="matricule" required pattern="[0-9]{8}" title="8 chiffres requis" placeholder="Ex: 19T12345">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" required placeholder="votre.email@ud.cm">
+                </div>
+                <div class="form-group">
+                    <label for="telephone">Téléphone :</label>
+                    <input type="tel" id="telephone" name="telephone" pattern="[0-9]{9}" title="9 chiffres requis, ex: 6XXXXXXXX" placeholder="Ex: 670123456">
+                </div>
+                <div class="form-group">
+                    <label for="filiere">Filière :</label>
+                    <select id="filiere" name="filiere" required>
+                        <option value="">Sélectionnez votre filière</option>
+                        <option value="GL">Génie Logiciel (GL)</option>
+                        <option value="RT">Réseaux et Télécommunications (RT)</option>
+                        <option value="ISM">Informatique, Statistique et Modélisation (ISM)</option>
+                        <option value="GEI">Génie Électrique et Informatique (GEI)</option>
+                        <option value="autres">Autres (Précisez ci-dessous)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="commentaire">Commentaires (facultatif) :</label>
+                    <textarea id="commentaire" name="commentaire" rows="4" placeholder="Des informations complémentaires..."></textarea>
+                </div>
+                <button type="submit" class="submit-button"><i class="fas fa-user-plus"></i> S'inscrire en INFO152</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Université de Douala - Filière Informatique licence 1. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        // Optionnel: Validation JavaScript côté client (simple exemple)
+        document.querySelector('.registration-form').addEventListener('submit', function(event) {
+            const matriculeInput = document.getElementById('matricule');
+            if (!matriculeInput.checkValidity()) {
+                alert("Veuillez entrer un matricule valide (8 chiffres).");
+                event.preventDefault(); // Empêche l'envoi du formulaire
+            }
+
+            const telInput = document.getElementById('telephone');
+            if (telInput.value && !telInput.checkValidity()) { // checkValidity() fonctionne avec pattern
+                alert("Veuillez entrer un numéro de téléphone valide (9 chiffres).");
+                event.preventDefault();
+            }
+            
+        });
+    </script>
+</body>
+</html>
